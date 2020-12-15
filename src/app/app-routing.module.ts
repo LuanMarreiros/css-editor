@@ -8,7 +8,7 @@ const routes: Routes = [
 {path: 'css', component: ToolbarComponent},
 {path: 'css/:option', component: ToolbarComponent},
 {path: '', redirectTo: 'css', pathMatch: 'full'},
-{path: 'css/**', component: PageNotFoundComponent},
+{path: '**', component: PageNotFoundComponent},
 
 ];
 
