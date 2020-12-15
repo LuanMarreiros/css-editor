@@ -1,1 +1,66 @@
-<p>text-editor works!</p>
+<div class="row">
+
+    <div class="col-md-8">
+        <div class="texto-to-edit">
+            <span [ngStyle]="textEdit()">{{textToEdit}}</span>
+        </div>
+    </div>
+
+    <div class="editor-body overflow-scroll col-md-4">
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Clique para copiar o código CSS</h2><br>
+                <button class="col-12" mat-flat-button color="primary" (click)="pegarCss()">Pegar css</button>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Adicione o texto para edição</h2>
+                <mat-form-field>
+                    <textarea rows="10" [(ngModel)]="textToEdit" type="text" matInput color="pink"></textarea>
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Tamanho da fonte</h2>
+                <mat-slider thumbLabel tickInterval="1" min="1" max="139" [(ngModel)]="fontSize"></mat-slider>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Expessura da fonte</h2>
+                <mat-slider thumbLabel tickInterval="100" step="100" min="100" max="800" [(ngModel)]="fontWeight">
+                </mat-slider>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Tipo de fonte</h2>
+                <span class="example-list-section">
+                    <div class="checkbox-font-family">
+                        <div *ngFor="let item of fontFamilyGroup; let i = index">
+                            <mat-checkbox class="checkbox-margin" [checked]="fontFamilyChecked === item"
+                                (change)="fontFamilyChecked = item">
+                                {{item}}
+                            </mat-checkbox>
+                        </div>
+                    </div>
+                </span>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Espaçamento</h2>
+                <h5>Adicione um texto com mais de uma linha para utilizar essa função</h5>
+                <mat-slider [(ngModel)]="lineHeight" thumbLabel tickInterval="0.1" step="0.1" min="1" max="5">
+                </mat-slider>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+</div>
