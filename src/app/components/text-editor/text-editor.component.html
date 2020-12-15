@@ -13,11 +13,21 @@
                 <small>O código CSS estará disponibilizado na areá de transfêrencia (CNTRL + V)</small>
             </mat-card-content>
         </mat-card>
+
         <mat-card class="card-body">
             <mat-card-content>
                 <h2>Adicione o texto para edição</h2>
                 <mat-form-field>
                     <textarea rows="10" [(ngModel)]="textToEdit" type="text" matInput color="pink"></textarea>
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Código ou nome da cor da borda</h2>
+                <mat-form-field>
+                    <input [(ngModel)]="textColor" type="text" matInput color="pink">
                 </mat-form-field>
             </mat-card-content>
         </mat-card>

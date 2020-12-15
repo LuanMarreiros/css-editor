@@ -31,6 +31,7 @@ export class TextEditorComponent implements OnInit {
   fontFamilyChecked = 'Arial';
   textToEdit = ['Lorem ipsum']
   lineHeight = 1;
+  textColor = "#000000";
 
   textEdit() {
     let myStyleClass = {
@@ -38,12 +39,13 @@ export class TextEditorComponent implements OnInit {
       'font-weight': this.fontWeight,
       'font-family': this.fontFamilyChecked,
       'line-height': this.lineHeight,
+      'color': this.textColor
     };
     return myStyleClass;
   }
 
   pegarCss() {
-    let css = `{ font-size: ${this.fontSize}, font-weight: ${this.fontWeight}, font-family: ${this.fontFamilyChecked}, line-height: ${this.lineHeight} }`;
+    let css = `{ font-size: ${this.fontSize}, font-weight: ${this.fontWeight}, font-family: ${this.fontFamilyChecked}, color: ${this.textColor}, line-height: ${this.lineHeight} }`;
     this.clipBoard.copy(css);
   }
 

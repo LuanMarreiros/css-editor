@@ -25,22 +25,27 @@ export class ListaOpcoesComponent implements OnInit {
     switch (parametro) {
       case 'text': {
         this.trocarDeComponent('text');
+        document.getElementById('toogleSideNav').click();
         return
       }
       case 'color': {
         this.trocarDeComponent('color');
+        document.getElementById('toogleSideNav').click();
         return
       }
       case 'shadow': {
         this.trocarDeComponent('shadow');
+        document.getElementById('toogleSideNav').click();
         return
       }
-      case 'shadow': {
+      case 'border': {
         this.trocarDeComponent('border');
+        document.getElementById('toogleSideNav').click();
         return
       }
       case '': {
         this.trocarDeComponent('inicio');
+        document.getElementById('toogleSideNav').click();
         return
       }
     }

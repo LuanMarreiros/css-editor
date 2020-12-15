@@ -1,1 +1,71 @@
-<p>shadow-editor works!</p>
+<div class="row">
+
+    <div class="col-md-8" align="center">
+
+        <p class="shadow-to-edit">
+            <mat-toolbar color="warn" [ngStyle]="shadowEdit()">
+                <button mat-icon-button>
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span>My App</span>
+                <span class="espacador"></span>
+                <button mat-icon-button>
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>share</mat-icon>
+                </button>
+            </mat-toolbar>
+        </p>
+        
+    </div>
+
+    <div class="editor-body overflow-scroll col-md-4">
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <button class="col-12" mat-flat-button color="primary" (click)="pegarCss()">Copiar código CSS</button>
+                <small>O código CSS estará disponibilizado na areá de transfêrencia (CNTRL + V)</small>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Código ou nome da cor da borda</h2>
+                <mat-form-field>
+                    <input [(ngModel)]="shadowColor" type="text" matInput color="pink">
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Altura vertical</h2>
+                <mat-slider thumbLabel tickInterval="1" min="0" max="200" [(ngModel)]="shadowVerticalPixel"></mat-slider>
+            </mat-card-content> 
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Altura horizontal</h2>
+                <mat-slider thumbLabel tickInterval="1" min="0" max="200" [(ngModel)]="shadowHorizontalPixel"></mat-slider>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Extensão/largura</h2>
+                <mat-slider thumbLabel tickInterval="1" min="0" max="200" [(ngModel)]="shadowSpreadPixel"></mat-slider>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Arredondamento das bordas</h2>
+                <mat-slider thumbLabel tickInterval="1" min="0" max="30" [(ngModel)]="shadowRadiusPixel"></mat-slider>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+
+</div>
