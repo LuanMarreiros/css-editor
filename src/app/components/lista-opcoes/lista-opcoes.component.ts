@@ -35,6 +35,10 @@ export class ListaOpcoesComponent implements OnInit {
         this.trocarDeComponent('shadow');
         return
       }
+      case 'shadow': {
+        this.trocarDeComponent('border');
+        return
+      }
       case '': {
         this.trocarDeComponent('inicio');
         return

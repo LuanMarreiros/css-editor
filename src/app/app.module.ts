@@ -12,6 +12,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material.module';
 import { FormsModule } from '@angular/forms';
+import { ShadowEditorComponent } from './components/shadow-editor/shadow-editor.component';
+import { BorderEditorComponent } from './components/border-editor/border-editor.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FormsModule } from '@angular/forms';
     SidenavComponent,
     TextEditorComponent,
     ToolbarComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ShadowEditorComponent,
+    BorderEditorComponent
   ],
   imports: [
     BrowserModule,

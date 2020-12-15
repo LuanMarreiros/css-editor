@@ -9,6 +9,11 @@ import { Conteudo } from '../../abstracoes/Conteudo';
 })
 export class TextEditorComponent implements OnInit {
 
+  constructor(private clipBoard: Clipboard) { }
+
+  ngOnInit(): void {
+  }
+
   fontSize = 30;
   fontWeight = 100;
   fontFamilyGroup = [
@@ -40,12 +45,6 @@ export class TextEditorComponent implements OnInit {
   pegarCss() {
     let css = `{ font-size: ${this.fontSize}, font-weight: ${this.fontWeight}, font-family: ${this.fontFamilyChecked}, line-height: ${this.lineHeight} }`;
     this.clipBoard.copy(css);
-  }
-
-  constructor(private conteudo: Conteudo, private clipBoard: Clipboard) { }
-
-  ngOnInit(): void {
-    this.conteudo.getOpcaoLista();
   }
 
 }
