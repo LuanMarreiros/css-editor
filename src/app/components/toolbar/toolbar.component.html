@@ -1,1 +1,15 @@
-<p>toolbar works!</p>
+<mat-sidenav-container class="side-nav-body">
+    <mat-toolbar color="primary">
+        <button (click)="sidenav.toggle()" mat-icon-button aria-label="Botão de abrir o menu de opções">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="espaçador"></span>
+        <span routerLink="" style="cursor:pointer">CSS Editor</span>
+    </mat-toolbar>
+
+    <mat-sidenav #sidenav>
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+
+    <app-css-editor></app-css-editor>
+</mat-sidenav-container>
