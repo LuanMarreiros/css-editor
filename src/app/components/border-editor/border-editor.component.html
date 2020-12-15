@@ -1,17 +1,61 @@
 <div class="row">
 
     <div class="col-md-8" align="center">
-        <div class="border-to-edit">
-            <div class="border"></div>
+        <div class="border-to-edit" [ngStyle]="borderEdit()">
+            <p>{{borderText}}</p>
         </div>
     </div>
 
     <div class="editor-body overflow-scroll col-md-4">
+
         <mat-card class="card-body">
             <mat-card-content>
-                <h1>Oi</h1>
+                <button class="col-12" mat-flat-button color="primary" (click)="pegarCss()">Copiar código CSS</button>
+                <small>O código CSS estará disponibilizado na areá de transfêrencia (CNTRL + V)</small>
             </mat-card-content>
         </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Adicione um texto para edição</h2>
+                <mat-form-field>
+                    <textarea rows="3" [(ngModel)]="borderText" type="text" matInput color="pink"></textarea>
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Código ou nome da cor da borda</h2>
+                <mat-form-field>
+                    <input [(ngModel)]="borderColor" type="text" matInput color="pink">
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Largura da borda</h2>
+                <mat-slider thumbLabel tickInterval="1" min="1" max="15" [(ngModel)]="borderPixel"></mat-slider>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-card-content>
+                <h2>Tipo de borda</h2>
+                <span class="example-list-section">
+                    <div class="checkbox-font-family">
+                        <div *ngFor="let item of borderStyle; let i = index">
+                            <mat-checkbox class="checkbox-margin" [checked]="borderStyleChecked === item"
+                                (change)="borderStyleChecked = item">
+                                {{item}}
+                            </mat-checkbox>
+                        </div>
+                    </div>
+                </span>
+            </mat-card-content>
+        </mat-card>
+
     </div>
 
 </div>

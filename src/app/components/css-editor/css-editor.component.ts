@@ -11,15 +11,11 @@ export class CssEditorComponent implements OnInit {
 
   opcaoLista;
 
-  constructor(private conteudo: Conteudo, private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     setInterval(() => {
-      if (this.conteudo.getOpcaoLista()) {
-        this.opcaoLista = this.conteudo.getOpcaoLista()
-      } else {
-        this.verificarParametroUrl();
-      }
+      this.verificarParametroUrl();
     }, 300);
   }
 

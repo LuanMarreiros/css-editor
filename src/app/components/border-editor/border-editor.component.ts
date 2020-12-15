@@ -8,18 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BorderEditorComponent implements OnInit {
 
-  borderLeft = 0;
-  borderRight = 0;
-  borderTop = 0;
-  borderBottom = 0;
-
+  borderColor = "#000000";
+  borderPixel = 5;
+  borderText = "";
+  borderStyle = [
+    "dotted",
+    "dashed",
+    "solid",
+    "double",
+    "hidden"
+  ];
+  borderStyleChecked = "solid";
   constructor(private clipBoard: Clipboard) { }
 
   ngOnInit(): void {
   }
 
   borderEdit(){
+    let myStyleClass = {
+      'border-color': this.borderColor,
+      'border-style': this.borderStyleChecked,
+      'border-width.px': this.borderPixel,
+    };
+    return myStyleClass;
+  }
 
+  pegarCss() {
+    let css = `{ border:  ${this.borderColor} ${this.borderPixel}px ${this.borderStyleChecked} }`;
+    this.clipBoard.copy(css);
   }
 
 }
