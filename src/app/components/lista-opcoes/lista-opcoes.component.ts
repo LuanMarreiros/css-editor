@@ -9,7 +9,7 @@ import { Conteudo } from 'src/app/abstracoes/Conteudo';
 })
 export class ListaOpcoesComponent implements OnInit {
 
-  parametroDaUrl: String = '';
+  parametroDaUrl: String = location.href;
 
   constructor(private conteudo: Conteudo) { }
 
@@ -57,6 +57,8 @@ export class ListaOpcoesComponent implements OnInit {
   }
 
   isOpen(opcao){
+    this.parametroDaUrl = this.parametroDaUrl.replace('http://localhost:4200/css/','');
+
     let openClass = {
       'border-left': '5px solid green',
       'border-radius': '4px'
