@@ -9,7 +9,7 @@ import { Conteudo } from 'src/app/abstracoes/Conteudo';
 })
 export class ListaOpcoesComponent implements OnInit {
 
-  parametroDaUrl: String = location.href;
+  parametroDaUrl: String;
 
   constructor(private conteudo: Conteudo) { }
 
@@ -24,31 +24,26 @@ export class ListaOpcoesComponent implements OnInit {
   verficiarOpcaoMenu(parametro: String) {
     switch (parametro) {
       case 'text': {
-        this.parametroDaUrl = 'text';
         this.trocarDeComponent('text');
         document.getElementById('toogleSideNav').click();
         return
       }
       case 'color': {
-        this.parametroDaUrl = 'color';
         this.trocarDeComponent('color');
         document.getElementById('toogleSideNav').click();
         return
       }
       case 'shadow': {
-        this.parametroDaUrl = 'shadow';
         this.trocarDeComponent('shadow');
         document.getElementById('toogleSideNav').click();
         return
       }
       case 'border': {
-        this.parametroDaUrl = 'border';
         this.trocarDeComponent('border');
         document.getElementById('toogleSideNav').click();
         return
       }
       case '': {
-        this.parametroDaUrl = 'inicio';
         this.trocarDeComponent('inicio');
         document.getElementById('toogleSideNav').click();
         return
@@ -57,8 +52,9 @@ export class ListaOpcoesComponent implements OnInit {
   }
 
   isOpen(opcao){
-    this.parametroDaUrl = this.parametroDaUrl.replace('http://localhost:4200/css/','');
+    this.parametroDaUrl = location.href;
 
+    this.parametroDaUrl = this.parametroDaUrl.split('/')[4];
     let openClass = {
       'border-left': '5px solid green',
       'border-radius': '4px'

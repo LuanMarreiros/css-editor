@@ -2,14 +2,14 @@
 
     <div class="col-md-8">
         <div class="text-to-edit">
-            <span [ngStyle]="textEdit()">{{textToEdit}}</span>
+            <span [ngStyle]="textEdit(checkbox.checked)">{{textToEdit}}</span>
         </div>
     </div>
 
     <div class="editor-body overflow-scroll col-md-4">
         <mat-card class="card-body">
             <mat-card-content>
-                <button class="col-12" mat-flat-button color="primary" (click)="pegarCss()">Copiar código CSS</button>
+                <button class="col-12" mat-flat-button color="primary" (click)="pegarCss(checkbox.checked)">Copiar código CSS</button>
                 <small>O código CSS estará disponibilizado na área de transfêrencia (CNTRL + V)</small>
             </mat-card-content>
         </mat-card>
@@ -18,7 +18,7 @@
             <mat-card-content>
                 <h2>Adicione o texto para edição</h2>
                 <mat-form-field>
-                    <textarea rows="10" [(ngModel)]="textToEdit" type="text" matInput color="pink"></textarea>
+                    <textarea rows="4" [(ngModel)]="textToEdit" type="text" matInput color="pink"></textarea>
                 </mat-form-field>
             </mat-card-content>
         </mat-card>
@@ -26,7 +26,8 @@
         <mat-card class="card-body">
             <mat-card-content>
                 <div>
-                    <button class="col-12" mat-flat-button color="primary" [cpPosition]="'bottom'" [cpOutputFormat]="'rgba'" [(colorPicker)]="textColor" >Escolher cor do texto</button>
+                    <button class="col-12" mat-flat-button color="primary" [cpPosition]="'bottom'"
+                        [cpOutputFormat]="'rgba'" [(colorPicker)]="textColor">Escolher cor do texto</button>
                 </div>
             </mat-card-content>
         </mat-card>
@@ -70,6 +71,25 @@
                 </mat-slider>
             </mat-card-content>
         </mat-card>
+
+        <mat-card class="card-body">
+            <mat-checkbox class="example-margin" style="float: right;" [checked]="true" #checkbox>Habiliar sombra</mat-checkbox>
+            <h2>Sombra do texto </h2>
+            <hr>
+            <mat-card-content>
+                <div>
+                    <button [disabled]="!checkbox.checked" class="col-12" mat-flat-button color="primary" [cpPosition]="'bottom'"
+                        [cpOutputFormat]="'rgba'" [(colorPicker)]="shadowColor">Escolher cor da sombra</button>
+                </div>
+                <br>
+                <h2>Altura vertical</h2>
+                <mat-slider [disabled]="!checkbox.checked" thumbLabel tickInterval="1" min="-60" max="60" [(ngModel)]="shadowVerticalPixel"></mat-slider>
+
+                <h2>Altura horizontal</h2>
+                <mat-slider [disabled]="!checkbox.checked" thumbLabel tickInterval="1" min="-60" max="60" [(ngModel)]="shadowHorizontalPixel"></mat-slider>
+            </mat-card-content>
+        </mat-card>
+
     </div>
 
 </div>
