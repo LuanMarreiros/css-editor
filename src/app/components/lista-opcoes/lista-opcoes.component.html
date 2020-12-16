@@ -1,7 +1,7 @@
 <mat-list role="list">
-    <mat-list-item role="listitem" routerLink="/" (click)="verficiarOpcaoMenu('')">Início</mat-list-item>
-    <mat-list-item role="listitem" [routerLink]="['/css','text']" (click)="verficiarOpcaoMenu('text')">Text</mat-list-item>
-    <mat-list-item role="listitem" [routerLink]="['/css','color']" (click)="verficiarOpcaoMenu('color')">Color</mat-list-item>
-    <mat-list-item role="listitem" [routerLink]="['/css','shadow']" (click)="verficiarOpcaoMenu('shadow')">Shadow</mat-list-item>
-    <mat-list-item role="listitem" [routerLink]="['/css','border']" (click)="verficiarOpcaoMenu('border')">Border</mat-list-item>
+    <mat-list-item role="listitem" [ngStyle]="isOpen('')" routerLink="/" (click)="verficiarOpcaoMenu('')">Início</mat-list-item>
+    <mat-list-item role="listitem" [ngStyle]="isOpen('text')" [routerLink]="['/css','text']" (click)="verficiarOpcaoMenu('text')">Text</mat-list-item>
+    <mat-list-item role="listitem" [ngStyle]="isOpen('color')" [routerLink]="['/css','color']" (click)="verficiarOpcaoMenu('color')">Color</mat-list-item>
+    <mat-list-item role="listitem" [ngStyle]="isOpen('shadow')" [routerLink]="['/css','shadow']" (click)="verficiarOpcaoMenu('shadow')">Shadow</mat-list-item>
+    <mat-list-item role="listitem" [ngStyle]="isOpen('border')" [routerLink]="['/css','border']" (click)="verficiarOpcaoMenu('border')">Border</mat-list-item>
 </mat-list>

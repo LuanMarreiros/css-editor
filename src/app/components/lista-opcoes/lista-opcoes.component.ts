@@ -9,7 +9,7 @@ import { Conteudo } from 'src/app/abstracoes/Conteudo';
 })
 export class ListaOpcoesComponent implements OnInit {
 
-  parametroDaUrl: String;
+  parametroDaUrl: String = '';
 
   constructor(private conteudo: Conteudo) { }
 
@@ -24,30 +24,46 @@ export class ListaOpcoesComponent implements OnInit {
   verficiarOpcaoMenu(parametro: String) {
     switch (parametro) {
       case 'text': {
+        this.parametroDaUrl = 'text';
         this.trocarDeComponent('text');
         document.getElementById('toogleSideNav').click();
         return
       }
       case 'color': {
+        this.parametroDaUrl = 'color';
         this.trocarDeComponent('color');
         document.getElementById('toogleSideNav').click();
         return
       }
       case 'shadow': {
+        this.parametroDaUrl = 'shadow';
         this.trocarDeComponent('shadow');
         document.getElementById('toogleSideNav').click();
         return
       }
       case 'border': {
+        this.parametroDaUrl = 'border';
         this.trocarDeComponent('border');
         document.getElementById('toogleSideNav').click();
         return
       }
       case '': {
+        this.parametroDaUrl = 'inicio';
         this.trocarDeComponent('inicio');
         document.getElementById('toogleSideNav').click();
         return
       }
+    }
+  }
+
+  isOpen(opcao){
+    let openClass = {
+      'border-left': '5px solid green',
+      'border-radius': '4px'
+    }
+
+    if(opcao == this.parametroDaUrl){
+      return openClass;
     }
   }
 
