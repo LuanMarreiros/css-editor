@@ -10,10 +10,9 @@ export class ShadowEditorComponent implements OnInit {
 
   shadowHorizontalPixel = 10;
   shadowVerticalPixel = 10;
+  shadowRadiusPixel = 12;
   shadowSpreadPixel = 5;
-  shadowRadiusPixel = 0;
-  shadowOpacity = 1;
-  shadowColor = "#000000";
+  shadowColor = "rgba(0,0,0,0.4)";
 
   constructor(private clipBoard:Clipboard) { }
 

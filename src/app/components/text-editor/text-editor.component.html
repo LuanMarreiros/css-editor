@@ -25,10 +25,9 @@
 
         <mat-card class="card-body">
             <mat-card-content>
-                <h2>Código ou nome da cor da borda</h2>
-                <mat-form-field>
-                    <input [(ngModel)]="textColor" type="text" matInput color="pink">
-                </mat-form-field>
+                <div>
+                    <button mat-flat-button color="primary" [cpOutputFormat]="'rgba'" [(colorPicker)]="textColor" >Escolher cor da sombra</button>
+                </div>
             </mat-card-content>
         </mat-card>
 
