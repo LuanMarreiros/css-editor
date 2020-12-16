@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShadowEditorComponent implements OnInit {
 
-  shadowHorizontalPixel = 10;
-  shadowVerticalPixel = 10;
-  shadowRadiusPixel = 12;
-  shadowSpreadPixel = 5;
+  shadowHorizontalPixel = 0;
+  shadowVerticalPixel = 0;
+  shadowRadiusPixel = 28;
+  shadowSpreadPixel = 0;
   shadowColor = "rgba(0,0,0,0.4)";
 
   constructor(private clipBoard:Clipboard) { }

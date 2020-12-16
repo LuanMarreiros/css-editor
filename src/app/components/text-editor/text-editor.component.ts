@@ -29,7 +29,7 @@ export class TextEditorComponent implements OnInit {
     'Brush Script MT',
   ]
   fontFamilyChecked = 'Arial';
-  textToEdit = ['Lorem ipsum']
+  textToEdit = ["Lorem Ipsum is simply dummy text of the printing and typesetting industry."]
   lineHeight = 1;
   textColor = "#000000";
 
