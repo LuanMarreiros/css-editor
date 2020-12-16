@@ -67,6 +67,10 @@ ul {
     overflow-y: scroll;
 }
 
+.checkbox-margin {
+    margin-top: 6px !important;
+}
+
 @media(max-width: 764px) {
     .text-to-edit {
         position: relative;

@@ -66,6 +66,7 @@ export class TextEditorComponent implements OnInit {
       this.clipBoard.copy(css);
     }else{
       let css = `font-size: ${this.fontSize};\nfont-weight: ${this.fontWeight};\nfont-family: ${this.fontFamilyChecked};\ncolor: ${this.textColor};\nline-height: ${this.lineHeight};`;
+      this.clipBoard.copy(css);
     }
   }
 

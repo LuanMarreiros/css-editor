@@ -50,7 +50,7 @@
         <mat-card class="card-body">
             <mat-card-content>
                 <h2>Tipo de fonte</h2>
-                <span class="example-list-section">
+                <span>
                     <div class="checkbox-font-family">
                         <div *ngFor="let item of fontFamilyGroup; let i = index">
                             <mat-checkbox class="checkbox-margin" [checked]="fontFamilyChecked === item"
@@ -73,7 +73,7 @@
         </mat-card>
 
         <mat-card class="card-body">
-            <mat-checkbox class="example-margin" style="float: right;" [checked]="true" #checkbox>Habiliar sombra</mat-checkbox>
+            <mat-checkbox class="checkbox-margin" style="float: right;" [checked]="true" #checkbox>Habiliar sombra</mat-checkbox>
             <h2>Sombra do texto </h2>
             <hr>
             <mat-card-content>
