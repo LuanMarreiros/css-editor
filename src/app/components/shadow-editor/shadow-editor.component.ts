@@ -27,7 +27,7 @@ export class ShadowEditorComponent implements OnInit {
   }
 
   pegarCss() {
-    let css = `{ box-shadow: ${this.shadowHorizontalPixel}px ${this.shadowVerticalPixel}px ${this.shadowRadiusPixel}px ${this.shadowSpreadPixel}px ${this.shadowColor} }`;
+    let css = `box-shadow: ${this.shadowHorizontalPixel}px ${this.shadowVerticalPixel}px ${this.shadowRadiusPixel}px ${this.shadowSpreadPixel}px ${this.shadowColor};`;
     this.clipBoard.copy(css);
   }
 

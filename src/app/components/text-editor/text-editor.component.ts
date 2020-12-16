@@ -45,7 +45,7 @@ export class TextEditorComponent implements OnInit {
   }
 
   pegarCss() {
-    let css = `{ font-size: ${this.fontSize}, font-weight: ${this.fontWeight}, font-family: ${this.fontFamilyChecked}, color: ${this.textColor}, line-height: ${this.lineHeight} }`;
+    let css = `font-size: ${this.fontSize};\nfont-weight: ${this.fontWeight};\nfont-family: ${this.fontFamilyChecked};\ncolor: ${this.textColor};\nline-height: ${this.lineHeight};`;
     this.clipBoard.copy(css);
   }
 

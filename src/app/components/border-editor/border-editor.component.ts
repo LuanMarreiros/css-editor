@@ -34,7 +34,7 @@ export class BorderEditorComponent implements OnInit {
   }
 
   pegarCss() {
-    let css = `{ border:  ${this.borderColor} ${this.borderPixel}px ${this.borderStyleChecked} }`;
+    let css = `border:  ${this.borderColor} ${this.borderPixel}px ${this.borderStyleChecked}`;
     this.clipBoard.copy(css);
   }
 
