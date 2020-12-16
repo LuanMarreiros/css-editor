@@ -1,6 +1,6 @@
 <div>
-    <div *ngIf="opcaoLista == 'inicio'">
-        <h1>inicio</h1>
+    <div *ngIf="opcaoLista == undefined">
+        <app-initial-page></app-initial-page>
     </div>
     <div *ngIf="opcaoLista == 'text'">
         <app-text-editor></app-text-editor>

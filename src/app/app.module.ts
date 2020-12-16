@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { ShadowEditorComponent } from './components/shadow-editor/shadow-editor.component';
 import { BorderEditorComponent } from './components/border-editor/border-editor.component';
 import { ColorEditorComponent } from './components/color-editor/color-editor.component';
+import { InitialPageComponent } from './components/initial-page/initial-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ColorEditorComponent } from './components/color-editor/color-editor.com
     PageNotFoundComponent,
     ShadowEditorComponent,
     BorderEditorComponent,
-    ColorEditorComponent
+    ColorEditorComponent,
+    InitialPageComponent
   ],
   imports: [
     BrowserModule,
