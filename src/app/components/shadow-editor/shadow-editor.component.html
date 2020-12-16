@@ -17,7 +17,7 @@
                 </button>
             </mat-toolbar>
         </p>
-        
+
     </div>
 
     <div class="editor-body overflow-scroll col-md-4">
@@ -31,31 +31,32 @@
 
         <mat-card class="card-body">
             <mat-card-content>
-                <h2>Código ou nome da cor da borda</h2>
-                <mat-form-field>
-                    <input [(ngModel)]="shadowColor" type="text" matInput color="pink">
-                </mat-form-field>
+                <div>
+                    <button mat-flat-button color="primary" [cpOutputFormat]="'rgba'" [(colorPicker)]="shadowColor" >Escolher cor da sombra</button>
+                </div>
             </mat-card-content>
         </mat-card>
 
         <mat-card class="card-body">
             <mat-card-content>
                 <h2>Altura vertical</h2>
-                <mat-slider thumbLabel tickInterval="1" min="0" max="200" [(ngModel)]="shadowVerticalPixel"></mat-slider>
-            </mat-card-content> 
+                <mat-slider thumbLabel tickInterval="1" min="0" max="200" [(ngModel)]="shadowVerticalPixel">
+                </mat-slider>
+            </mat-card-content>
         </mat-card>
 
         <mat-card class="card-body">
             <mat-card-content>
                 <h2>Altura horizontal</h2>
-                <mat-slider thumbLabel tickInterval="1" min="0" max="200" [(ngModel)]="shadowHorizontalPixel"></mat-slider>
+                <mat-slider thumbLabel tickInterval="1" min="0" max="200" [(ngModel)]="shadowHorizontalPixel">
+                </mat-slider>
             </mat-card-content>
         </mat-card>
 
         <mat-card class="card-body">
             <mat-card-content>
                 <h2>Extensão/largura</h2>
-                <mat-slider thumbLabel tickInterval="1" min="0" max="200" [(ngModel)]="shadowSpreadPixel"></mat-slider>
+                <mat-slider thumbLabel tickInterval="1" min="0" max="50" [(ngModel)]="shadowSpreadPixel"></mat-slider>
             </mat-card-content>
         </mat-card>
 
