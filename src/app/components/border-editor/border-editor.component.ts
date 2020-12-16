@@ -19,9 +19,16 @@ export class BorderEditorComponent implements OnInit {
     "hidden"
   ];
   borderStyleChecked = "solid";
+  borderRadius = 0;
+
   constructor(private clipBoard: Clipboard) { }
 
   ngOnInit(): void {
+    this.setPageTitle();
+  }
+
+  setPageTitle(){
+    document.title = 'CSS Editor | Border';
   }
 
   borderEdit(){
@@ -29,12 +36,13 @@ export class BorderEditorComponent implements OnInit {
       'border-color': this.borderColor,
       'border-style': this.borderStyleChecked,
       'border-width.px': this.borderPixel,
+      'border-radius.px': this.borderRadius
     };
     return myStyleClass;
   }
 
   pegarCss() {
-    let css = `border:  ${this.borderColor} ${this.borderPixel}px ${this.borderStyleChecked}`;
+    let css = `border:  ${this.borderColor} ${this.borderPixel}px ${this.borderStyleChecked}\n'border-radius': ${this.borderRadius}px`;
     this.clipBoard.copy(css);
   }
 

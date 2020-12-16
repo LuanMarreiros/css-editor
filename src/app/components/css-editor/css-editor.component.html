@@ -6,10 +6,7 @@
         <app-text-editor></app-text-editor>
     </div>
     <div *ngIf="opcaoLista == 'color'">
-        <div class="em-contrucao">
-            <img src="./assets/construção.png" alt="página em construção">
-            <h1>tela em construção</h1>
-        </div>
+        <app-color-editor></app-color-editor>
     </div>
     <div *ngIf="opcaoLista == 'shadow'">
         <app-shadow-editor></app-shadow-editor>

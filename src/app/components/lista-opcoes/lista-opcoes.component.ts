@@ -52,15 +52,17 @@ export class ListaOpcoesComponent implements OnInit {
   }
 
   isOpen(opcao){
-    this.parametroDaUrl = location.href;
-
-    this.parametroDaUrl = this.parametroDaUrl.split('/')[4];
     let openClass = {
       'border-left': '5px solid green',
       'border-radius': '4px'
     }
 
+    this.parametroDaUrl = location.href;
+    this.parametroDaUrl = this.parametroDaUrl.split('/')[4];
+
     if(opcao == this.parametroDaUrl){
+      return openClass;
+    }else if(this.parametroDaUrl == undefined && opcao == ''){
       return openClass;
     }
   }

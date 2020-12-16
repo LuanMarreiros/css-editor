@@ -10,13 +10,14 @@ import { Conteudo } from 'src/app/abstracoes/Conteudo';
 export class CssEditorComponent implements OnInit {
 
   opcaoLista;
+  documentTitle = document.title;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     setInterval(() => {
       this.verificarParametroUrl();
-    }, 300);
+    });
   }
 
   verificarParametroUrl() {

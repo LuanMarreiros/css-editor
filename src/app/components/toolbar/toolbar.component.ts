@@ -10,6 +10,11 @@ export class ToolbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.setPageTitle();
+  }
+
+  setPageTitle(){
+    document.title = 'CSS Editor';
   }
 
 }

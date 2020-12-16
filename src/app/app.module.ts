@@ -14,6 +14,7 @@ import { MaterialModule } from './modules/material.module';
 import { FormsModule } from '@angular/forms';
 import { ShadowEditorComponent } from './components/shadow-editor/shadow-editor.component';
 import { BorderEditorComponent } from './components/border-editor/border-editor.component';
+import { ColorEditorComponent } from './components/color-editor/color-editor.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BorderEditorComponent } from './components/border-editor/border-editor.
     ToolbarComponent,
     PageNotFoundComponent,
     ShadowEditorComponent,
-    BorderEditorComponent
+    BorderEditorComponent,
+    ColorEditorComponent
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,11 @@ export class ShadowEditorComponent implements OnInit {
   constructor(private clipBoard:Clipboard) { }
 
   ngOnInit(): void {
+    this.setPageTitle();
+  }
+
+  setPageTitle(){
+    document.title = 'CSS Editor | Shadow';
   }
 
   shadowEdit(){

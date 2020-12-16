@@ -12,6 +12,7 @@ export class TextEditorComponent implements OnInit {
   constructor(private clipBoard: Clipboard) { }
 
   ngOnInit(): void {
+    this.setPageTitle();
   }
 
   fontSize = 30;
@@ -36,6 +37,10 @@ export class TextEditorComponent implements OnInit {
   shadowHorizontalPixel = 2;
   shadowVerticalPixel = 2;
   shadowColor = "rgba(255,0,0,1)";
+
+  setPageTitle(){
+    document.title = 'CSS Editor | Text';
+  }
 
   textEdit(isChecked) {
     if(isChecked){
@@ -62,7 +67,7 @@ export class TextEditorComponent implements OnInit {
 
   pegarCss(isChecked) {
     if(isChecked){
-      let css = `font-size: ${this.fontSize};\nfont-weight: ${this.fontWeight};\nfont-family: ${this.fontFamilyChecked};\ncolor: ${this.textColor};\nline-height: ${this.lineHeight};\ntext-shadow: ${this.shadowHorizontalPixel}px ${this.shadowVerticalPixel}px ${this.shadowColor}`;
+      let css = `font-size: ${this.fontSize};\nfont-weight: ${this.fontWeight};\nfont-family: ${this.fontFamilyChecked};\ncolor: ${this.textColor};\nline-height: ${this.lineHeight};\ntext-shadow: ${this.shadowHorizontalPixel}px ${this.shadowVerticalPixel}px ${this.shadowColor};`;
       this.clipBoard.copy(css);
     }else{
       let css = `font-size: ${this.fontSize};\nfont-weight: ${this.fontWeight};\nfont-family: ${this.fontFamilyChecked};\ncolor: ${this.textColor};\nline-height: ${this.lineHeight};`;
