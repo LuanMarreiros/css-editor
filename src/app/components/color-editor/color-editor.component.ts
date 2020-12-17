@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColorEditorComponent implements OnInit {
 
+  color = '';
+
   constructor() { }
 
   ngOnInit(): void {

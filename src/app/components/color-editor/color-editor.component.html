@@ -1,4 +1,27 @@
-<div class="em-contrucao">
-    <img src="./assets/construção.png" alt="página em construção">
-    <h1>tela em construção</h1>
+<div class="row">
+
+    <div class="col-md-8" align="center">
+        <div class="color-to-edit">
+            <div class="rectangle-body col-md-12" [style.backgroundColor]="color"></div>
+            <br>
+            <mat-card class="card-body">
+                <mat-card-content>
+                    <div>
+                        <button class="col-12" mat-flat-button color="primary" [cpPosition]="'bottom'" [cpOutputFormat]="'rgba'" [(colorPicker)]="color" >Escolher cor</button>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="editor-body overflow-scroll col-md-4">
+
+        <mat-card class="card-body">
+            <mat-form-field>
+                <input type="text" value="{{color}}" readonly matInput placeholder="Código RGB da cor escolhida">
+            </mat-form-field>
+        </mat-card>
+
+    </div>
+
 </div>
