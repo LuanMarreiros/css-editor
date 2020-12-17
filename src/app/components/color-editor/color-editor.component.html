@@ -2,23 +2,29 @@
 
     <div class="col-md-8" align="center">
         <div class="color-to-edit">
-            <div class="rectangle-body col-md-12" [style.backgroundColor]="color"></div>
-            <br>
-            <mat-card class="card-body">
-                <mat-card-content>
-                    <div>
-                        <button class="col-12" mat-flat-button color="primary" [cpPosition]="'bottom'" [cpOutputFormat]="'rgba'" [(colorPicker)]="color" >Escolher cor</button>
-                    </div>
-                </mat-card-content>
-            </mat-card>
+            <div class="rectangle-body col-md-12" [style.backgroundColor]="colorRGB"></div>
         </div>
     </div>
 
     <div class="editor-body overflow-scroll col-md-4">
 
         <mat-card class="card-body">
+            <mat-card-content>
+                <div>
+                    <button class="col-12" mat-flat-button color="primary" [cpPositionOffset]="'40%'" [cpPosition]="'bottom'" [cpOutputFormat]="'rgba'" [(colorPicker)]="colorRGB" >Escolher cor</button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-body">
             <mat-form-field>
-                <input type="text" value="{{color}}" readonly matInput placeholder="Código RGB da cor escolhida">
+                <input type="text" value="{{colorRGB}}" readonly matInput placeholder="Código RGB da cor escolhida">
+            </mat-form-field>
+        </mat-card>
+
+        <mat-card class="card-body">
+            <mat-form-field>
+                <input type="text" value="{{colorHEX}}" readonly matInput placeholder="Código HEX da cor escolhida">
             </mat-form-field>
         </mat-card>
 

@@ -29,6 +29,7 @@
 .editor-body {
     position: relative;
     top: 50px;
+    min-height: 450px;
     max-height: 480px;
 }
 
@@ -79,7 +80,7 @@ ul {
         width: 100%
     }
     .editor-body {
-        top: 280px;
+        top: 190px;
         position: relative;
     }
 }
