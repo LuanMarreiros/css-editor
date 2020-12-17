@@ -35,6 +35,9 @@ export class ListaOpcoesComponent implements OnInit {
       case 'border': {
         this.changeCurrentComponent('border');
       }
+      case 'free-editor': {
+        this.changeCurrentComponent('free-editor');
+      }
       case '': {
         this.changeCurrentComponent('inicio');
       }
