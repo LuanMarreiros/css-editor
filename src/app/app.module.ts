@@ -16,6 +16,7 @@ import { ShadowEditorComponent } from './components/shadow-editor/shadow-editor.
 import { borderEditClassorComponent } from './components/border-editor/border-editor.component';
 import { ColorEditorComponent } from './components/color-editor/color-editor.component';
 import { InitialPageComponent } from './components/initial-page/initial-page.component';
+import { FreeEditorComponent } from './components/free-editor/free-editor.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { InitialPageComponent } from './components/initial-page/initial-page.com
     ShadowEditorComponent,
     borderEditClassorComponent,
     ColorEditorComponent,
-    InitialPageComponent
+    InitialPageComponent,
+    FreeEditorComponent
   ],
   imports: [
     BrowserModule,
