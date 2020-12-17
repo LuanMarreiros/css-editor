@@ -13,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material.module';
 import { FormsModule } from '@angular/forms';
 import { ShadowEditorComponent } from './components/shadow-editor/shadow-editor.component';
-import { BorderEditorComponent } from './components/border-editor/border-editor.component';
+import { borderEditClassorComponent } from './components/border-editor/border-editor.component';
 import { ColorEditorComponent } from './components/color-editor/color-editor.component';
 import { InitialPageComponent } from './components/initial-page/initial-page.component';
 
@@ -27,7 +27,7 @@ import { InitialPageComponent } from './components/initial-page/initial-page.com
     ToolbarComponent,
     PageNotFoundComponent,
     ShadowEditorComponent,
-    BorderEditorComponent,
+    borderEditClassorComponent,
     ColorEditorComponent,
     InitialPageComponent
   ],

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShadowEditorComponent } from './shadow-editor.component';
+import { shadowEditClassorComponent } from './shadow-editor.component';
 
-describe('ShadowEditorComponent', () => {
-  let component: ShadowEditorComponent;
-  let fixture: ComponentFixture<ShadowEditorComponent>;
+describe('shadowEditClassorComponent', () => {
+  let component: shadowEditClassorComponent;
+  let fixture: ComponentFixture<shadowEditClassorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShadowEditorComponent ]
+      declarations: [ shadowEditClassorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShadowEditorComponent);
+    fixture = TestBed.createComponent(shadowEditClassorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

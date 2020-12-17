@@ -24,14 +24,14 @@ export class ShadowEditorComponent implements OnInit {
     document.title = 'CSS Editor | Shadow';
   }
 
-  shadowEdit(){
+  shadowEditClass(){
     let myStyleClass = {
       'box-shadow': `${this.shadowHorizontalPixel}px ${this.shadowVerticalPixel}px ${this.shadowRadiusPixel}px ${this.shadowSpreadPixel}px ${this.shadowColor}`
     };
     return myStyleClass;
   }
 
-  pegarCss() {
+  cssCodeToClipboard() {
     let css = `box-shadow: ${this.shadowHorizontalPixel}px ${this.shadowVerticalPixel}px ${this.shadowRadiusPixel}px ${this.shadowSpreadPixel}px ${this.shadowColor};`;
     this.clipBoard.copy(css);
   }

@@ -9,12 +9,6 @@ import { Conteudo } from '../../abstracoes/Conteudo';
 })
 export class TextEditorComponent implements OnInit {
 
-  constructor(private clipBoard: Clipboard) { }
-
-  ngOnInit(): void {
-    this.setPageTitle();
-  }
-
   fontSize = 30;
   fontWeight = 100;
   fontFamilyGroup = [
@@ -38,34 +32,48 @@ export class TextEditorComponent implements OnInit {
   shadowVerticalPixel = 2;
   shadowColor = "rgba(255,0,0,1)";
 
+  constructor(private clipBoard: Clipboard) { }
+
+  ngOnInit(): void {
+    this.setPageTitle();
+  }
+
   setPageTitle(){
     document.title = 'CSS Editor | Text';
   }
 
-  textEdit(isChecked) {
+  textEditClass(isChecked) {
     if(isChecked){
-      let myStyleClass = {
-        'font-size.px': this.fontSize,
-        'font-weight': this.fontWeight,
-        'font-family': this.fontFamilyChecked,
-        'line-height': this.lineHeight,
-        'color': this.textColor,
-        'text-shadow': `${this.shadowHorizontalPixel}px ${this.shadowVerticalPixel}px ${this.shadowColor}`
-      };
-      return myStyleClass;
+      return this.isCheckedClass();
     }else{
-      let myStyleClass = {
-        'font-size.px': this.fontSize,
-        'font-weight': this.fontWeight,
-        'font-family': this.fontFamilyChecked,
-        'line-height': this.lineHeight,
-        'color': this.textColor,
-      };
-      return myStyleClass;
+      return this.isNotCheckedClass();
     }
   }
 
-  pegarCss(isChecked) {
+  isCheckedClass(){
+    let myStyleClass = {
+      'font-size.px': this.fontSize,
+      'font-weight': this.fontWeight,
+      'font-family': this.fontFamilyChecked,
+      'line-height': this.lineHeight,
+      'color': this.textColor,
+      'text-shadow': `${this.shadowHorizontalPixel}px ${this.shadowVerticalPixel}px ${this.shadowColor}`
+    };
+    return myStyleClass;
+  }
+
+  isNotCheckedClass(){
+    let myStyleClass = {
+      'font-size.px': this.fontSize,
+      'font-weight': this.fontWeight,
+      'font-family': this.fontFamilyChecked,
+      'line-height': this.lineHeight,
+      'color': this.textColor,
+    };
+    return myStyleClass;
+  }
+
+  cssCodeToClipboard(isChecked) {
     if(isChecked){
       let css = `font-size: ${this.fontSize};\nfont-weight: ${this.fontWeight};\nfont-family: ${this.fontFamilyChecked};\ncolor: ${this.textColor};\nline-height: ${this.lineHeight};\ntext-shadow: ${this.shadowHorizontalPixel}px ${this.shadowVerticalPixel}px ${this.shadowColor};`;
       this.clipBoard.copy(css);

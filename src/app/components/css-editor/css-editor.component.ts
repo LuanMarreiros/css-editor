@@ -9,19 +9,19 @@ import { Conteudo } from 'src/app/abstracoes/Conteudo';
 })
 export class CssEditorComponent implements OnInit {
 
-  opcaoLista;
+  currentComponent;
   documentTitle = document.title;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     setInterval(() => {
-      this.verificarParametroUrl();
+      this.verifyUrlParam();
     });
   }
 
-  verificarParametroUrl() {
-    this.opcaoLista = this.activatedRoute.snapshot.paramMap.get('option');
+  verifyUrlParam() {
+    this.currentComponent = this.activatedRoute.snapshot.paramMap.get('option');
   }
 
 }

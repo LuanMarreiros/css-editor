@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BorderEditorComponent } from './border-editor.component';
+import { borderEditClassorComponent } from './border-editor.component';
 
-describe('BorderEditorComponent', () => {
-  let component: BorderEditorComponent;
-  let fixture: ComponentFixture<BorderEditorComponent>;
+describe('borderEditClassorComponent', () => {
+  let component: borderEditClassorComponent;
+  let fixture: ComponentFixture<borderEditClassorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BorderEditorComponent ]
+      declarations: [ borderEditClassorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BorderEditorComponent);
+    fixture = TestBed.createComponent(borderEditClassorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

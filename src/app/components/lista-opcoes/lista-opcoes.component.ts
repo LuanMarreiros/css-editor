@@ -9,7 +9,7 @@ import { Conteudo } from 'src/app/abstracoes/Conteudo';
 })
 export class ListaOpcoesComponent implements OnInit {
 
-  parametroDaUrl: String;
+  urlParam: String;
 
   constructor(private conteudo: Conteudo) { }
 
@@ -17,53 +17,43 @@ export class ListaOpcoesComponent implements OnInit {
 
   }
 
-  trocarDeComponent(component) {
-    this.conteudo.setOpcaoLista(component);
+  changeCurrentComponent(component) {
+    this.conteudo.setCurrentComponent(component);
   };
 
-  verficiarOpcaoMenu(parametro: String) {
-    switch (parametro) {
+  verifyMenuOption(option) {
+    switch (option) {
       case 'text': {
-        this.trocarDeComponent('text');
-        document.getElementById('toogleSideNav').click();
-        return
+        this.changeCurrentComponent('text');
       }
       case 'color': {
-        this.trocarDeComponent('color');
-        document.getElementById('toogleSideNav').click();
-        return
+        this.changeCurrentComponent('color');
       }
       case 'shadow': {
-        this.trocarDeComponent('shadow');
-        document.getElementById('toogleSideNav').click();
-        return
+        this.changeCurrentComponent('shadow');
       }
       case 'border': {
-        this.trocarDeComponent('border');
-        document.getElementById('toogleSideNav').click();
-        return
+        this.changeCurrentComponent('border');
       }
       case '': {
-        this.trocarDeComponent('inicio');
-        document.getElementById('toogleSideNav').click();
-        return
+        this.changeCurrentComponent('inicio');
       }
+      document.getElementById('toogleSideNav').click();
+      return
     }
   }
 
-  isOpen(opcao){
-    let openClass = {
+  isComponentOpen(component){
+    let isComponentOpenClass = {
       'border-left': '5px solid green',
       'border-radius': '4px'
     }
 
-    this.parametroDaUrl = location.href;
-    this.parametroDaUrl = this.parametroDaUrl.split('/')[4];
+    this.urlParam = location.href;
+    this.urlParam = this.urlParam.split('/')[4];
 
-    if(opcao == this.parametroDaUrl){
-      return openClass;
-    }else if(this.parametroDaUrl == undefined && opcao == ''){
-      return openClass;
+    if(component == this.urlParam || this.urlParam == undefined && component == ''){
+      return isComponentOpenClass;
     }
   }
 

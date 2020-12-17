@@ -6,14 +6,14 @@ import { Injectable } from '@angular/core';
 
 export class Conteudo {
 
-    private opcaoLista;
+    private currentComponent;
 
-    setOpcaoLista(newOpcaoLista) {
-        this.opcaoLista = newOpcaoLista;
+    setCurrentComponent(newcurrentComponent) {
+        this.currentComponent = newcurrentComponent;
     }
 
-    getOpcaoLista() {
-        return this.opcaoLista;
+    getcurrentComponent() {
+        return this.currentComponent;
     }
 
 }

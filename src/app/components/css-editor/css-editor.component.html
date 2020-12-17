@@ -1,17 +1,17 @@
 <div>
-    <div *ngIf="opcaoLista == undefined">
+    <div *ngIf="currentComponent == undefined">
         <app-initial-page></app-initial-page>
     </div>
-    <div *ngIf="opcaoLista == 'text'">
+    <div *ngIf="currentComponent == 'text'">
         <app-text-editor></app-text-editor>
     </div>
-    <div *ngIf="opcaoLista == 'color'">
+    <div *ngIf="currentComponent == 'color'">
         <app-color-editor></app-color-editor>
     </div>
-    <div *ngIf="opcaoLista == 'shadow'">
+    <div *ngIf="currentComponent == 'shadow'">
         <app-shadow-editor></app-shadow-editor>
     </div>
-    <div *ngIf="opcaoLista == 'border'">
+    <div *ngIf="currentComponent == 'border'">
         <app-border-editor></app-border-editor>
     </div>
 </div>

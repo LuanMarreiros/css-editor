@@ -2,14 +2,14 @@
 
     <div class="col-md-8">
         <div class="text-to-edit">
-            <span [ngStyle]="textEdit(checkbox.checked)">{{textToEdit}}</span>
+            <span [ngStyle]="textEditClass(checkbox.checked)">{{textToEdit}}</span>
         </div>
     </div>
 
     <div class="editor-body overflow-scroll col-md-4">
         <mat-card class="card-body">
             <mat-card-content>
-                <button class="col-12" mat-flat-button color="primary" (click)="pegarCss(checkbox.checked)">Copiar código CSS</button>
+                <button class="col-12" mat-flat-button color="primary" (click)="cssCodeToClipboard(checkbox.checked)">Copiar código CSS</button>
                 <small>O código CSS estará disponibilizado na área de transfêrencia (CNTRL + V)</small>
             </mat-card-content>
         </mat-card>

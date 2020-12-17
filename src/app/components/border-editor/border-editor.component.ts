@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './border-editor.component.html',
   styleUrls: ['./border-editor.component.css']
 })
-export class BorderEditorComponent implements OnInit {
+export class borderEditClassorComponent implements OnInit {
 
   borderColor = "#000000";
   borderPixel = 5;
@@ -31,7 +31,7 @@ export class BorderEditorComponent implements OnInit {
     document.title = 'CSS Editor | Border';
   }
 
-  borderEdit(){
+  borderEditClass(){
     let myStyleClass = {
       'border-color': this.borderColor,
       'border-style': this.borderStyleChecked,
@@ -41,7 +41,7 @@ export class BorderEditorComponent implements OnInit {
     return myStyleClass;
   }
 
-  pegarCss() {
+  cssCodeToClipboard() {
     let css = `border:  ${this.borderColor} ${this.borderPixel}px ${this.borderStyleChecked}\n'border-radius': ${this.borderRadius}px`;
     this.clipBoard.copy(css);
   }

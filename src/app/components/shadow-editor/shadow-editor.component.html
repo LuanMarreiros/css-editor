@@ -3,7 +3,7 @@
     <div class="col-md-8" align="center">
 
         <p class="shadow-to-edit">
-            <mat-toolbar color="warn" [ngStyle]="shadowEdit()">
+            <mat-toolbar color="warn" [ngStyle]="shadowEditClass()">
                 <button mat-icon-button>
                     <mat-icon>menu</mat-icon>
                 </button>
@@ -24,7 +24,7 @@
 
         <mat-card class="card-body">
             <mat-card-content>
-                <button class="col-12" mat-flat-button color="primary" (click)="pegarCss()">Copiar código CSS</button>
+                <button class="col-12" mat-flat-button color="primary" (click)="cssCodeToClipboard()">Copiar código CSS</button>
                 <small>O código CSS estará disponibilizado na área de transfêrencia (CNTRL + V)</small>
             </mat-card-content>
         </mat-card>
